@@ -22,6 +22,4 @@ script: mvn --settings settings-ci.xml clean deploy -Pci -Dgpg.passphrase=$GPG_P
 
 deploy:
   provider: script
-  script: "mvn deploy"
-  on:
-    branch: release
+  script: "echo 'Deployment is handled by Nexus Staging Deploy Plugin'"
