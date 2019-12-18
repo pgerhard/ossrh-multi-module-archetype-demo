@@ -16,9 +16,9 @@ jdk:
 before_install:
   - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import
 
-install: mvn clean deploy -Pci -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+install: mvn clean install -Pci -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip -B -V
 
-script: mvn clean deploy -Pci
+script: mvn clean deploy -Pci -Dgpg.passphrase=$GPG_PASSPHRASE
 
 deploy:
   provider: script
