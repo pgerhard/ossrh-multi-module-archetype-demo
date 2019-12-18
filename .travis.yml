@@ -1,4 +1,5 @@
 os: linux
+
 language: java
 
 cache:
@@ -8,15 +9,7 @@ cache:
 jdk:
   - openjdk8
 
-
-jobs:
-  include:
-    - branches: release
-      env: MVN_PROFILE=release
-    - branches: !release
-      env: MVN_PROFILE=ci
-
-install: mvn $MVN_GOAL -P$MVN_PROFILE -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+install: mvn clean deploy -Pci -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
 script: mvn clean deploy -P$MVN_PROFILE
 
