@@ -15,7 +15,6 @@ jdk:
 # Add the value to your repository as an env variable called $GPG_SECRET_KEYS
 before_install:
   - echo $GPG_SECRET_KEYS | base64 --decode | $GPG_EXECUTABLE --import
-  - echo $GPG_OWNERTRUST | base64 --decode | $GPG_EXECUTABLE --import-ownertrust
 
 install: mvn clean deploy -Pci -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
