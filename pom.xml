@@ -61,7 +61,7 @@
             
     <snapshotRepository>
                   
-      <id>ossrh</id>
+      <id>ossrh-snapshots</id>
                   
       <url>https://oss.sonatype.org/content/repositories/snapshots</url>
               
@@ -117,7 +117,7 @@
             
     <!-- Staging properties -->
             
-    <nexus.staging.maven.plugin.nexus-id>ossrh</nexus.staging.maven.plugin.nexus-id>
+    <nexus.staging.maven.plugin.nexus-id>ossrh-snapshots</nexus.staging.maven.plugin.nexus-id>
             
     <nexus.staging.maven.plugin.nexus-url>https://oss.sonatype.org
         </nexus.staging.maven.plugin.nexus-url>

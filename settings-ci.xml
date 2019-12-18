@@ -8,7 +8,7 @@
             <password>${env.OSSRH_PWD_TOKEN}</password>
         </server>
         <server>
-            <id>ossrh</id>
+            <id>ossrh-snapshots</id>
             <username>${env.OSSRH_USER_TOKEN}</username>
             <password>${env.OSSRH_PWD_TOKEN}</password>
         </server>
