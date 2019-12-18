@@ -19,7 +19,3 @@ before_install:
 install: mvn --settings settings-ci.xml clean install -Pci -DskipTests=true -Dmaven.javadoc.skip=true -Dgpg.skip -B -V
 
 script: mvn --settings settings-ci.xml clean deploy -Pci -Dgpg.passphrase=$GPG_PASSPHRASE
-
-deploy:
-  provider: script
-  script: "echo 'Deployment is handled by Nexus Staging Deploy Plugin'"
